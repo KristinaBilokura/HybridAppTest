@@ -29,9 +29,6 @@ public class AbstractPage extends Driver {
         return getWait().until(ExpectedConditions.visibilityOf(webElement));
     }
 
-    protected Boolean isElementDisplayed(WebElement webElement) {
-        return webElement.isDisplayed();
-    }
 
     protected void sendKeysVisible(WebElement webElement, String text) {
         waitUntilBeVisible(webElement);
@@ -50,8 +47,6 @@ public class AbstractPage extends Driver {
         actions.moveToElement(webElement).perform();
         waitUntilBeClickable(webElement).click();
     }
-    public void getPage(final String url) {
-        getDriver().get(url);
-    }
+
 
 }
